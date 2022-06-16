@@ -1,0 +1,73 @@
+h1{
+    font-weight: bold;
+}
+.content{
+    max-width: 700px;
+    margin: auto;
+    background-color: white;
+    padding: 2% 5%;
+}
+
+button{
+    background-color:#0063ff;
+    color: #fff;
+}
+
+.error{
+    color: red;
+
+}
+
+.wrapper {
+    position: relative;
+  
+}
+
+.wrapperselet {
+    position: relative;
+  
+}
+input {
+    padding-left: 48px;
+
+}
+
+.wrapper span {
+    position: absolute;
+    left: 12px;
+    top:2px;
+ 
+}
+.wrapperselet span {
+    position: absolute;
+    right: 12px;
+    top:2px;
+ 
+}
+.mat-form-field {
+    margin: 40px 0;
+    width: 500px !important;
+}
+.mat-toolbar-single-row {
+    height: auto !important;
+    background: transparent;
+}
+.mat-toolbar-single-row button {
+    width: 200px;
+}
+.mat-form-field {
+    width: 100%;
+}
+#uploadFile {
+    top: 0px;
+    left: 0px;
+    width: 100%;    
+    z-index: 9;
+    opacity: 0;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+}
+.bule{
+    color:blue;
+}

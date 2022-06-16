@@ -1,0 +1,101 @@
+h1{
+    font-weight: bold;
+}
+.container{
+    margin: auto;
+    padding: 16px;
+    
+}
+.content-login{
+    max-width: 500px;
+    margin: auto;
+    background-color: white;
+    padding: 2% 2%;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  span.rgs {
+    float: left;
+    padding-top: 16px;
+  }
+  h1{
+    float: right;  
+  }
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+  }
+
+.error{
+    color: red;
+
+}
+
+.wrapper {
+    position: relative;
+  
+}
+
+.wrapperselet {
+    position: relative;
+  
+}
+input {
+    padding-left: 48px;
+
+}
+
+.wrapper span {
+    position: absolute;
+    left: 12px;
+    top:2px;
+ 
+}
+.wrapperselet span {
+    position: absolute;
+    right: 12px;
+    top:2px;
+ 
+}
+.mat-form-field {
+    margin: 40px 0;
+    width: 500px !important;
+}
+.mat-toolbar-single-row {
+    height: auto !important;
+    background: transparent;
+}
+.mat-toolbar-single-row button {
+    width: 200px;
+}
+.mat-form-field {
+    width: 100%;
+}
+#uploadFile {
+    top: 0px;
+    left: 0px;
+    width: 100%;    
+    z-index: 9;
+    opacity: 0;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+}
+.bule{
+    color:blue;
+}

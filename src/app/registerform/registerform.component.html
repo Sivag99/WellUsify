@@ -1,0 +1,100 @@
+<div class="mt-5 container">
+    <form class="content" [formGroup]="registerForm" (ngSubmit)="submitData()">
+        <h1 class="text-center">Contant us</h1>
+        <h2 class="text-center">Have queires reach out us</h2>
+        <h3 class="text-center">Share few deatils with us our team will get in touch with you</h3>
+
+    <div class="row">
+        <div class="mt-2 mb-2 col-lg-6 col-6">
+            <label class="mt-1 mb-1">First Name</label><span style="color:#ff0000">*</span>
+            <input type="text" formControlName="firstName" class="form-control" placeholder="ex:Zomie"> 
+            <div class="mt-1 mb-1" *ngIf="firstname.invalid && (firstname.touched ||firstname.dirty)">
+                <span class="error" *ngIf="firstname.errors?.required">First name is Required</span>
+                <span class="error" *ngIf="firstname.errors?.pattern">Enter only Characters</span>
+            </div>
+        </div>
+
+        <div class="mt-2 mb-2 col-lg-6 col-6">
+            <label class="mt-1 mb-1">Last Name</label><span style="color:#ff0000">*</span>
+            <input type="text" formControlName="lastName" class="form-control" placeholder="ex: Zomie"> 
+            <div class="mt-1 mb-1" *ngIf="lastname.invalid && (lastname.touched ||lastname.dirty)">
+                <span class="error" *ngIf="lastname.errors?.required">Last name is Required</span>
+                <span class="error" *ngIf="lastname.errors?.pattern">Enter only Characters</span>
+            </div>
+        </div>
+
+        <div class="mt-2 mb-2 col-lg-6 col-6">
+            <label class="mt-1 mb-1">Email</label><span style="color:#ff0000">*</span>
+            <div class="wrapper">
+            <input type="text" formControlName="email" class="form-control" placeholder="ex: xyz@gmail.com"> 
+            <span class="bule"><mat-icon>email</mat-icon></span>
+          </div>
+            <div class="mt-1 mb-1" *ngIf="emailid.invalid && (emailid.touched ||emailid.dirty)">
+                <span class="error" *ngIf="emailid.errors?.required">Email is Required</span>
+                <span class="error" *ngIf="emailid.errors?.email">Enter valide emailId</span>
+            </div>
+        </div>
+
+        <div class="mt-2 mb-2 col-lg-6 col-6 ">
+            <label class="mt-1 mb-1">Phone Number</label><span style="color:#ff0000">*</span>
+            <div class="wrapper">
+             <input type="text" formControlName="mobilNumber" class="form-control"  placeholder="ex: 9182707202">
+            <span class="bule"><mat-icon>settings_phone</mat-icon></span> 
+            </div>
+        <div class="mt-1 mb-1" *ngIf="mobilnumber.invalid && (mobilnumber.touched ||mobilnumber.dirty)">
+                <span class="error" *ngIf="mobilnumber.errors?.required">Mobile Number is Required</span>
+                <span class="error" *ngIf="mobilnumber.errors?.pattern">Please, Enter 10 digit Mobile Number</span>
+            </div> 
+        </div>
+        
+        <div class="mt-2 mb-2 col-lg-12 col-12">
+            <label class="mt-1 mb-1" for="categary">Choose the categary</label><span style="color:#ff0000">*</span>
+            <div class="wrapperselet">
+            <select formControlName="categary" class="form-control" placeholder="Choose the categary">
+                <option >-select your categary-</option>
+                <option *ngFor="let web of websiteList">{{web}}</option>
+            </select>
+            <span ><mat-icon>arrow_drop_down</mat-icon></span> 
+        </div>
+            <div class="mt-1 mb-1" *ngIf="categary1.touched && categary1.invalid">
+                <span class="error" *ngIf="categary1.errors.required">Select categary.</span>
+            </div>
+        </div>
+
+        <div class="mt-2 mb-2 col-lg-12 col-12">
+            <label class="mt-1 mb-1">write your subject</label><span style="color:#ff0000">*</span>
+            <input type="text" formControlName="subject" class="form-control" placeholder="write your subject here"> 
+            <div class="mt-1 mb-1" *ngIf="subject.invalid && (subject.touched ||subject.dirty)">
+                <span class="error" *ngIf="subject.errors?.required">subject is Required</span>
+                <span class="error" *ngIf="subject.errors?.pattern">Enter only Characters</span>
+            </div>
+        </div>
+        
+        <div class="mt-2 mb-2 col-lg-12 col-12">
+            <label class="mt-1 mb-1">Write your message1</label><span style="color:#ff0000">*</span>
+            <angular-editor [placeholder]="'write your comment here...'" formControlName="description" class="form-control"></angular-editor>
+            <div *ngIf="registerForm.controls.description.errors && registerForm.controls.description.touched" class="error">message is required(Max 400 - Min 5).</div>
+        </div>
+
+         <div class="mt-2 mb-2 col-lg-12 col-12" >
+            <label class="mt-1 mb-1">Attachment</label>
+          <mat-toolbar>
+            <input type="file" formControlName="fileAttr" class="form-control"/>            
+          </mat-toolbar>
+        </div>        
+        <div class="mt-2 mb-2  col-lg-12 col-12" >
+            <mat-checkbox class="form-control" 
+            formControlName="check">I wish to recevie communication and marking malis form wellusify
+            </mat-checkbox>
+            <div *ngIf="checked.errors && checked.touched">
+                <span class="error" *ngIf="checked.errors.required">Please checked.</span>
+            </div>
+        </div>
+        <div class="mt-3 text-center color:#ff0000 col-lg-12 col-12">
+            <button type="btn" color="primary" [disabled]="registerForm.invalid" >Submit</button> 
+        </div>
+    </div>
+    </form>
+
+    
+</div>

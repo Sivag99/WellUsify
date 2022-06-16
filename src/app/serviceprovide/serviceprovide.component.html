@@ -1,0 +1,12 @@
+<form [formGroup]="signup" >
+
+    <div class="form-group">
+      <label>Email address</label>
+      <input type="email" formControlName="email">
+    </div>
+  
+    <app-file-upload formControlName="image" ></app-file-upload>
+  
+    <button>Submit</button>
+  
+  </form>
